@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jessie Hinahon | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              brand: {
+                50: '#FBF9F0',
+                100: '#F5EFD6',
+                200: '#EBDDA3',
+                300: '#E0CB70',
+                400: '#D4AF37', // Gold
+                500: '#B5952F',
+                600: '#967B27',
+                700: '#78621F',
+                800: '#5A4917',
+                900: '#3C310F',
+              },
+              dark: {
+                bg: '#050505',
+                surface: '#0F0F0F',
+                card: '#181818',
+                border: '#272727',
+                text: '#E0E0E0',
+                muted: '#A0A0A0'
+              },
+              light: {
+                bg: '#FAFAFA',
+                surface: '#F4F4F5',
+                card: '#FFFFFF',
+                border: '#E4E4E7',
+                text: '#18181B',
+                muted: '#71717A'
+              }
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'spin-slow': 'spin 10s linear infinite',
+              'scan': 'scan 3s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              scan: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #555; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37; 
+      }
+
+      .liquid-glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      
+      .dark .liquid-glass {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      
+      .tech-grid {
+        background-size: 40px 40px;
+        background-image: 
+          linear-gradient(to right, rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      .click-particle {
+        position: fixed;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9999;
+        animation: ripple 0.8s ease-out forwards;
+        border: 1px solid #D4AF37;
+        box-shadow: 0 0 10px #D4AF37;
+      }
+
+      @keyframes ripple {
+        0% { opacity: 1; width: 0px; height: 0px; border-width: 4px; }
+        100% { opacity: 0; width: 50px; height: 50px; border-width: 0px; }
+      }
+      
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

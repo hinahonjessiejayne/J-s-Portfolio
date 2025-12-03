@@ -79,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
           >
             {imgError ? (
               <div className="w-8 h-8 rounded-full bg-brand-400 flex items-center justify-center text-xs font-bold text-black ring-2 ring-brand-400">
-                JH
+                J
               </div>
             ) : (
               <img 
@@ -91,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
               />
             )}
             <span className="text-lg font-serif font-bold tracking-wider text-gray-900 dark:text-white hidden sm:block">
-              HINAHON
+              Jessie
             </span>
           </a>
         </div>

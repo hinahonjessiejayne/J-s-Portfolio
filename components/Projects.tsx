@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '../constants';
@@ -190,6 +191,17 @@ const Projects: React.FC = () => {
                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-8">
                          {selectedProject.description}
                        </p>
+                       
+                       {selectedProject.link && (
+                         <a 
+                           href={selectedProject.link} 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center justify-center w-full px-4 py-3 bg-brand-400 text-black font-bold text-sm rounded-sm hover:bg-brand-500 transition-colors uppercase tracking-wider"
+                         >
+                           View Live Project <ExternalLink className="ml-2 w-4 h-4" />
+                         </a>
+                       )}
                     </div>
                  </div>
               </div>

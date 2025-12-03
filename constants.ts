@@ -1,3 +1,4 @@
+
 import { 
   Briefcase, 
   Settings, 
@@ -189,6 +190,14 @@ export const PROJECTS: Project[] = [
     category: "GHL",
     description: "Send Email reminders day before, 1 hour and 5 minutes before the appointment and SMS reminder",
     imageUrl: "https://i.imgur.com/vyzerBH.png"
+  },
+  {
+    id: "ghl-5",
+    title: "Sample Webpage",
+    category: "GHL",
+    description: "Ice Cream Shop Page",
+    imageUrl: "https://i.imgur.com/Bteqfba.png",
+    link: "https://app.gohighlevel.com/v2/preview/uJnrBWhFYue2S1jXGNLa?notrack=true"
   }
 ];
 

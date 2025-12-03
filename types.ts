@@ -1,3 +1,4 @@
+
 import { LucideIcon } from 'lucide-react';
 
 export interface Service {
@@ -20,6 +21,7 @@ export interface Project {
   category: string;
   description: string;
   imageUrl: string;
+  link?: string;
 }
 
 export interface Testimonial {
